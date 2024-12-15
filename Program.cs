@@ -374,5 +374,122 @@ namespace IfStatementExample
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 13: Using Logical Operators (&&, ||)
+using System;
+
+namespace LogicalOperatorsExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int age = 20;
+            bool hasLicense = true;
+
+            // AND Operator (&&)
+            if (age >= 18 && hasLicense)
+            {
+                Console.WriteLine("You are eligible to drive.");
+            }
+            else
+            {
+                Console.WriteLine("You are either not old enough or do not have a license.");
+            }
+
+            // OR Operator (||)
+            if (age < 18 || !hasLicense)
+            {
+                Console.WriteLine("You are either too young or do not have a license.");
+            }
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Lesson 14: Using for Loop
+
+
+namespace ForLoopExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Print numbers from 1 to 5
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Lesson 15: Using while Loop
+using System;
+
+namespace WhileLoopExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+            
+            // Print numbers from 1 to 5
+            while (i <= 5)
+            {
+                Console.WriteLine(i);
+                i++;  // Increment the counter
+            }
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Lesson 16: Using do...while Loop
+using System;
+
+namespace DoWhileLoopExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+
+            // Print numbers from 1 to 5
+            do
+            {
+                Console.WriteLine(i);
+                i++;
+            } while (i <= 5);
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Lesson 17: Using foreach Loop
+using System;
+
+namespace ForeachLoopExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] fruits = { "Apple", "Banana", "Cherry" };
+
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
