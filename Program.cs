@@ -334,3 +334,45 @@ namespace StringMethodsExample
         }
     }
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 11: Using if Statement in C#
+using System;
+
+namespace IfStatementExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int age =Convert.ToInt32(Console.ReadLine()); ;
+            
+
+            if (age >= 18)
+            {
+                Console.WriteLine("You are an adult.");
+            }
+            else
+            {
+                Console.WriteLine("You are a minor.");
+            }
+
+            // Using else if
+            if (age < 18)
+            {
+                Console.WriteLine("You are a minor.");
+            }
+            else if (age == 18)
+            {
+                Console.WriteLine("You just turned an adult!");
+            }
+            else
+            {
+                Console.WriteLine("You are an adult.");
+            }
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
