@@ -753,3 +753,43 @@ namespace MyNamespace
         }
     }
 }
+============================================================================================================================================================================================================================================================================
+    using System;
+
+// Base class representing a general Animal
+class Animal
+{
+    // Virtual method that can be overridden in derived classes
+    public virtual void Speak()
+    {
+        Console.WriteLine("Animal is making a sound.");
+    }
+}
+
+// Derived class Dog that inherits from Animal
+class Dog : Animal
+{
+    // Override the Speak method to provide a specific implementation for Dog
+    public override void Speak()
+    {
+        Console.WriteLine("Woof! Woof!");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create an instance of Animal and call Speak
+        Animal animal = new Animal();
+        animal.Speak();  // Output: Animal is making a sound.
+
+        // Create an instance of Dog and call Speak
+        Dog dog = new Dog();
+        dog.Speak();     // Output: Woof! Woof!
+
+        // Polymorphism: Treat a Dog as an Animal
+        Animal myDog = new Dog();
+        myDog.Speak();   // Output: Woof! Woof! (Method from Dog class)
+    }
+}
