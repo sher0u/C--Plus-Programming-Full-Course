@@ -266,3 +266,71 @@ namespace MathExample
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 10: Common String Methods in C#
+using System;
+
+namespace StringMethodsExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string text = "   Hello, C# World!   ";
+
+            // 1. Length
+            Console.WriteLine("Length: " + text.Length); // Output: 23
+
+            // 2. ToUpper() - Converts the string to uppercase
+            Console.WriteLine("ToUpper: " + text.ToUpper()); // Output: "   HELLO, C# WORLD!   "
+
+            // 3. ToLower() - Converts the string to lowercase
+            Console.WriteLine("ToLower: " + text.ToLower()); // Output: "   hello, c# world!   "
+
+            // 4. Trim() - Removes leading and trailing whitespace
+            Console.WriteLine("Trim: '" + text.Trim() + "'"); // Output: "Hello, C# World!"
+
+            // 5. Substring(startIndex)
+            Console.WriteLine("Substring(7): " + text.Substring(7)); // Output: "C# World!   "
+
+            // 6. Substring(startIndex, length)
+            Console.WriteLine("Substring(7, 3): " + text.Substring(7, 3)); // Output: "C# "
+
+            // 7. Replace(oldValue, newValue)
+            Console.WriteLine("Replace('C#', 'CSharp'): " + text.Replace("C#", "CSharp")); // Output: "   Hello, CSharp World!   "
+
+            // 8. Contains(value) - Checks if the string contains a substring
+            Console.WriteLine("Contains('C#'): " + text.Contains("C#")); // Output: True
+
+            // 9. IndexOf(value) - Finds the first occurrence of a substring
+            Console.WriteLine("IndexOf('C#'): " + text.IndexOf("C#")); // Output: 7
+
+            // 10. Split(delimiters) - Splits the string into an array of substrings
+            string[] words = text.Split(',');
+            Console.WriteLine("Split: " + string.Join(" | ", words)); // Output: "   Hello | C# World!   "
+
+            // 11. StartsWith(value) - Checks if the string starts with a specified value
+            Console.WriteLine("StartsWith('   Hello'): " + text.StartsWith("   Hello")); // Output: True
+
+            // 12. EndsWith(value) - Checks if the string ends with a specified value
+            Console.WriteLine("EndsWith('World!   '): " + text.EndsWith("World!   ")); // Output: True
+
+            // 13. Insert(index, value) - Inserts a substring at the specified index
+            Console.WriteLine("Insert(5, ', World'): " + text.Insert(5, ", World")); // Output: "   Hello, World, C# World!   "
+
+            // 14. Remove(startIndex) - Removes all characters from the specified index
+            Console.WriteLine("Remove(5): " + text.Remove(5)); // Output: "   Hello"
+
+            // 15. Remove(startIndex, length) - Removes a specified length of characters
+            Console.WriteLine("Remove(5, 3): " + text.Remove(5, 3)); // Output: "   Heo, C# World!   "
+
+            // 16. Equals(otherString) - Checks if two strings are equal
+            string text2 = "Hello, C# World!";
+            Console.WriteLine("Equals: " + text.Equals(text2)); // Output: False
+
+            // 17. ToCharArray() - Converts the string to a char array
+            char[] charArray = text.Trim().ToCharArray();
+            Console.WriteLine("ToCharArray: " + string.Join(", ", charArray)); // Output: H, e, l, l, o, ,, C, #,  , W, o, r, l, d, !
+
+        }
+    }
+}
