@@ -8,6 +8,8 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello student "); // TO Print a text in the C#;
+            Console.Beep(); // Use to beep when the console end ;
+                
         }
     }
 }
