@@ -113,3 +113,65 @@ namespace ConsoleApp1
         }
     }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 5: Type Casting in C#
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        // Type casting is converting a value from one data type to another.
+        static void Main(string[] args)
+        {
+            // Implicit casting (smaller to larger type) happens automatically in C#, like int to double.
+            // Explicit casting (larger to smaller type) needs to be specified or handled using Convert methods.
+
+            // Example of converting (casting) from a double to an int:
+            double a = 3.14; // A double value
+            int b; // Declare an integer variable
+            b = Convert.ToInt32(a); // Explicitly cast (convert) the double to an int using Convert.ToInt32
+            Console.WriteLine(b); // Output: 3 (decimal portion is truncated)
+
+            // Example of converting from an int to a string:
+            int e = 3; // An integer value
+            string c; // Declare a string variable
+            c = Convert.ToString(e); // Convert the integer to a string using Convert.ToString
+            Console.WriteLine(c); // Output: "3"
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 6: User Input in C#
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Reading a string input from the user
+            string name = Console.ReadLine(); // Similar to scanf in C for strings
+
+            // Reading an integer input from the user
+            // Convert.ToInt32() is used to convert the string input to an integer
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            // Reading a double (floating-point number)
+            // Convert.ToDouble() is used to convert the string input to a double
+            double height = Convert.ToDouble(Console.ReadLine());
+
+            // Reading a boolean input
+            // Convert.ToBoolean() converts the string input to a boolean (true/false)
+            bool isStudent = Convert.ToBoolean(Console.ReadLine());
+
+            // Displaying the collected user inputs
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+            Console.WriteLine("Height: " + height);
+            Console.WriteLine("Is Student: " + isStudent);
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
