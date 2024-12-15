@@ -526,44 +526,6 @@ namespace ArrayExample
             {
                 Console.WriteLine("Element at index " + i + ": " + numbers[i]);
             }
-        }
-    }
-}
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-using System;
-
-namespace ArrayExample
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Declaring and initializing an array using new
-            int[] numbers = new int[5];  // Array to hold 5 integers
-            
-            // Initializing array elements
-            numbers[0] = 10;
-            numbers[1] = 20;
-            numbers[2] = 30;
-            numbers[3] = 40;
-            numbers[4] = 50;
-            
-            // Declaring and initializing an array using array initializer
-            string[] fruits = { "Apple", "Banana", "Cherry", "Date" };
-
-            // Accessing array elements
-            Console.WriteLine(numbers[0]);  // Output: 10
-            Console.WriteLine(numbers[4]);  // Output: 50
-            Console.WriteLine(fruits[2]);   // Output: Cherry
-
-            // Length of an array
-            Console.WriteLine("Number of elements in 'numbers' array: " + numbers.Length);  // Output: 5
-
-            // Iterating through an array using a for loop
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.WriteLine("Element at index " + i + ": " + numbers[i]);
-            }
 
             // Prompting the user to enter new values for the array
             for (int i = 0; i < numbers.Length; i++)
@@ -582,3 +544,86 @@ namespace ArrayExample
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+// Lesson 20: Method  in C#
+namespace ArrayExample
+{
+    class Program
+    { 
+        // Method = performs a section of code whenever it's called/invoked.
+        // We use it to reuse code without writing it multiple times.
+        
+        static void Main(string[] args)
+        {
+            int age = 10;
+            string name = "Kader";
+            
+            // Calling the method and passing the arguments
+            HappyBirthday(name, age);
+        }
+
+        // Method declaration with parameters: 'name' and 'age'
+        static void HappyBirthday(string name, int age)
+        {
+            Console.WriteLine("Happy Birthday");
+            Console.WriteLine("Happy Birthday");
+            Console.WriteLine("Happy Birthday");
+            Console.WriteLine("Happy Birthday " + name);
+            Console.WriteLine("You are " + age + " years old");
+            Console.WriteLine();
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+// Lesson 21 Overloaded Method 
+// How It Works:
+// When you call an overloaded method, the compiler chooses the method
+// to execute based on the number or type of arguments you provide.
+// It matches the arguments with the available method signatures
+namespace MethodOverloadingExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Calling overloaded methods with different parameter types
+            PrintMessage("Hello!");
+            PrintMessage("Hello", 3);
+
+            // Calling overloaded methods with different number of parameters
+            int sum1 = AddNumbers(5, 10);
+            int sum2 = AddNumbers(5, 10, 15);
+
+            Console.WriteLine("Sum1: " + sum1);  // Output: Sum1: 15
+            Console.WriteLine("Sum2: " + sum2);  // Output: Sum2: 30
+        }
+
+        // Method with one string parameter
+        static void PrintMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
+
+        // Overloaded method with one string parameter and an integer for repetition count
+        static void PrintMessage(string message, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine(message);
+            }
+        }
+
+        // Method to add two integers
+        static int AddNumbers(int a, int b)
+        {
+            return a + b;
+        }
+
+        // Overloaded method to add three integers
+        static int AddNumbers(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+    }
+}
