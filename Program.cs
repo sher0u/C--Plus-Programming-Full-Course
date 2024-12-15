@@ -91,3 +91,25 @@ namespace ConsoleApp1
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 4: Constants in C#
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        // A constant is a value that cannot be changed or modified after its declaration.
+        static void Main(string[] args)
+        {
+            // Declaring a constant using the 'const' keyword
+            const double PI = 3.14159265358979323846;
+
+            // Trying to modify 'PI' will result in a compilation error because constants are immutable.
+            // Example (uncommenting the line below will cause an error):
+            // PI = 3.14;
+
+            // Displaying the value of the constant
+            Console.WriteLine(PI); // Output: 3.14159265358979323846
+        }
+    }
+}
