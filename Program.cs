@@ -627,3 +627,83 @@ namespace MethodOverloadingExample
         }
     }
 }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 22: Classes in  C#
+    using System;
+
+namespace MyNamespace
+{
+    // Define the 'Car' class
+    class Car
+    {
+        // Fields (or properties) of the Car class
+        public string Brand;  // The brand of the car (e.g., Audi, BMW)
+        public string Model;  // The model of the car (e.g., A4, X5)
+        public string Year;   // The year of the car's manufacture (e.g., 2000, 2020)
+
+        // Method to display the car's information
+        public void DisplayCars()
+        {
+            // Prints the car's details in the format: Year Brand Model
+            Console.WriteLine($"{Year} {Brand} {Model}");
+        }
+    }
+
+    // Main program class where execution begins
+    class Program
+    {
+        // Main method, entry point of the program
+        static void Main(string[] args)
+        {
+            // Creating a new instance of the 'Car' class
+            Car car = new Car();
+
+            // Setting the car's properties (attributes)
+            car.Brand = "Audi";   // Assigning the brand of the car
+            car.Model = "A4";     // Assigning the model of the car
+            car.Year = "2000";    // Assigning the year of manufacture
+
+            // Calling the DisplayCars method to show car information
+            car.DisplayCars();    // Output: 2000 Audi A4
+        }
+    }
+==============================================================================================================================================================================================================================================================================
+using System;
+
+namespace MyNamespace
+{
+    // Class representing a person
+    class Person
+    {
+        // Private field to store the name of the person
+        private string name ;
+
+        // Method to set the name
+        public void SetName(string name)
+        {
+            this.name = name;  // 'this.name' refers to the class field, while 'name' is the parameter
+        }
+
+        // Method to get the name
+        public string GetName()
+        {
+            return name;  // Return the value of the class field 'name'
+        }
+    }
+
+    // Main program class where execution starts
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create an instance of the 'Person' class
+            Person per = new Person();
+
+            // Set a new name using the 'SetName' method
+            per.SetName("Ahmed");
+
+            // Get the name and print it
+            Console.WriteLine(per.GetName());  // Output: Ahmed
+        }
+    }
+}
