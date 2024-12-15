@@ -530,3 +530,55 @@ namespace ArrayExample
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+
+namespace ArrayExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Declaring and initializing an array using new
+            int[] numbers = new int[5];  // Array to hold 5 integers
+            
+            // Initializing array elements
+            numbers[0] = 10;
+            numbers[1] = 20;
+            numbers[2] = 30;
+            numbers[3] = 40;
+            numbers[4] = 50;
+            
+            // Declaring and initializing an array using array initializer
+            string[] fruits = { "Apple", "Banana", "Cherry", "Date" };
+
+            // Accessing array elements
+            Console.WriteLine(numbers[0]);  // Output: 10
+            Console.WriteLine(numbers[4]);  // Output: 50
+            Console.WriteLine(fruits[2]);   // Output: Cherry
+
+            // Length of an array
+            Console.WriteLine("Number of elements in 'numbers' array: " + numbers.Length);  // Output: 5
+
+            // Iterating through an array using a for loop
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("Element at index " + i + ": " + numbers[i]);
+            }
+
+            // Prompting the user to enter new values for the array
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("Enter a number for index " + i + ":");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            // Display the updated array
+            Console.WriteLine("Updated numbers array:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("Element at index " + i + ": " + numbers[i]);
+            }
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
