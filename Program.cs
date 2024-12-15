@@ -225,3 +225,44 @@ namespace ArithmeticExample
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 9: Using Common Math Methods in C#
+using System;
+
+namespace MathExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Math.Abs(x): Returns the absolute value of x
+            int a = -10;
+            Console.WriteLine("Absolute Value of " + a + ": " + Math.Abs(a)); // Output: 10
+
+            // Math.Pow(x, y): Returns x raised to the power of y (x^y)
+            double baseNumber = 2;
+            double exponent = 3;
+            Console.WriteLine(baseNumber + " raised to the power of " + exponent + ": " + Math.Pow(baseNumber, exponent)); // Output: 8
+
+            // Math.Sqrt(x): Returns the square root of x
+            double number = 16;
+            Console.WriteLine("Square Root of " + number + ": " + Math.Sqrt(number)); // Output: 4
+
+            // Math.Floor(x): Returns the largest integer less than or equal to x
+            double floorExample = 3.99;
+            Console.WriteLine("Floor of " + floorExample + ": " + Math.Floor(floorExample)); // Output: 3
+
+            // Math.Round(x): Rounds x to the nearest integer
+            double roundingExample = 4.5;
+            Console.WriteLine("Round of " + roundingExample + ": " + Math.Round(roundingExample)); // Output: 4
+
+            // Math.Max(x, y): Returns the larger of the two numbers x and y
+            int num1 = 7;
+            int num2 = 3;
+            Console.WriteLine("Max of " + num1 + " and " + num2 + ": " + Math.Max(num1, num2)); // Output: 7
+
+            // Math.Min(x, y): Returns the smaller of the two numbers x and y
+            Console.WriteLine("Min of " + num1 + " and " + num2 + ": " + Math.Min(num1, num2)); // Output: 3
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
