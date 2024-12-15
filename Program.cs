@@ -175,3 +175,53 @@ namespace ConsoleApp1
     }
 }
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lesson 7: Arithmetic Operations in C#
+using System;
+
+namespace ArithmeticExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Declaring variables
+            int a = 10;
+            int b = 5;
+            double x = 12.5;
+            double y = 4.2;
+
+            // Addition
+            int sum = a + b;
+            Console.WriteLine("Sum: " + sum); // Output: 15
+
+            // Subtraction
+            int difference = a - b;
+            Console.WriteLine("Difference: " + difference); // Output: 5
+
+            // Multiplication
+            int product = a * b;
+            Console.WriteLine("Product: " + product); // Output: 50
+
+            // Division (integer division will truncate the decimal part)
+            int quotient = a / b;
+            Console.WriteLine("Quotient (int): " + quotient); // Output: 2
+
+            // Division (for floating-point numbers)
+            double floatQuotient = x / y;
+            Console.WriteLine("Quotient (double): " + floatQuotient); // Output: 2.9761904761904763
+
+            // Modulus (remainder)
+            int remainder = a % b;
+            Console.WriteLine("Remainder: " + remainder); // Output: 0
+
+            // Increment (Increase by 1)
+            a++;
+            Console.WriteLine("Incremented a: " + a); // Output: 11
+
+            // Decrement (Decrease by 1)
+            b--;
+            Console.WriteLine("Decremented b: " + b); // Output: 4
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
